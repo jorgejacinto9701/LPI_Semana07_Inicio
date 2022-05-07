@@ -10,14 +10,11 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.border.EmptyBorder;
-import javax.swing.table.DefaultTableModel;
 
 @SuppressWarnings("serial")
 public class FrmCrudCampeonato extends JFrame{
@@ -25,7 +22,6 @@ public class FrmCrudCampeonato extends JFrame{
 	private JPanel contentPane;
 	private JTextField txtNombre;
 	private JTextField txtAnno;
-	private JTable table;
 	private JButton btnRegistrar;
 	private JButton btnEliminar;
 	private JButton btnActualizar;
@@ -64,7 +60,7 @@ public class FrmCrudCampeonato extends JFrame{
 	 */
 	public FrmCrudCampeonato() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 466);
+		setBounds(100, 100, 652, 466);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -76,7 +72,7 @@ public class FrmCrudCampeonato extends JFrame{
 		lblMantenimientoCampeonato.setHorizontalAlignment(SwingConstants.CENTER);
 		lblMantenimientoCampeonato.setForeground(Color.WHITE);
 		lblMantenimientoCampeonato.setFont(new Font("Tahoma", Font.BOLD, 19));
-		lblMantenimientoCampeonato.setBounds(10, 11, 414, 59);
+		lblMantenimientoCampeonato.setBounds(10, 11, 616, 59);
 		contentPane.add(lblMantenimientoCampeonato);
 
 		JLabel lblNombre = new JLabel("Nombre");
@@ -99,26 +95,18 @@ public class FrmCrudCampeonato extends JFrame{
 
 		btnRegistrar = new JButton("Registrar");
 		btnRegistrar.setIcon(new ImageIcon(FrmCrudCampeonato.class.getResource("/iconos/add.gif")));
-		btnRegistrar.setBounds(10, 179, 114, 33);
+		btnRegistrar.setBounds(463, 91, 114, 30);
 		contentPane.add(btnRegistrar);
 
 		btnActualizar = new JButton("Actualizar");
 		btnActualizar.setIcon(new ImageIcon(FrmCrudCampeonato.class.getResource("/iconos/edit.gif")));
-		btnActualizar.setBounds(310, 179, 114, 33);
+		btnActualizar.setBounds(463, 176, 114, 30);
 		contentPane.add(btnActualizar);
 
 		btnEliminar = new JButton("Eliminar");
 		btnEliminar.setIcon(new ImageIcon(FrmCrudCampeonato.class.getResource("/iconos/delete.gif")));
-		btnEliminar.setBounds(158, 179, 114, 33);
+		btnEliminar.setBounds(463, 132, 114, 30);
 		contentPane.add(btnEliminar);
-
-		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(10, 233, 414, 184);
-		contentPane.add(scrollPane);
-
-		table = new JTable();
-		table.setModel(new DefaultTableModel(new Object[][] {}, new String[] { "Id", "Nombre", "A\u00F1o" }));
-		scrollPane.setViewportView(table);
 
 		// Traer todos los campeonatos de la BD
 	}

@@ -104,12 +104,12 @@ public class FrmCrudJugador extends JFrame {
 
 		btnActualizar = new JButton("Actualizar");
 		btnActualizar.setIcon(new ImageIcon(FrmCrudJugador.class.getResource("/iconos/edit.gif")));
-		btnActualizar.setBounds(495, 131, 130, 30);
+		btnActualizar.setBounds(495, 168, 130, 30);
 		contentPane.add(btnActualizar);
 
 		btnEliminar = new JButton("Eliminar");
 		btnEliminar.setIcon(new ImageIcon(FrmCrudJugador.class.getResource("/iconos/delete.gif")));
-		btnEliminar.setBounds(495, 172, 130, 30);
+		btnEliminar.setBounds(495, 127, 130, 30);
 		contentPane.add(btnEliminar);
 
 	}
