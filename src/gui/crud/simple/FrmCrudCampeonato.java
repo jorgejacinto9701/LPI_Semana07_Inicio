@@ -17,9 +17,10 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.border.EmptyBorder;
 
-@SuppressWarnings("serial")
 public class FrmCrudCampeonato extends JFrame {
 
+	private static final long serialVersionUID = 1L;
+	
 	private JPanel contentPane;
 	private JTextField txtNombre;
 	private JTextField txtAnno;
