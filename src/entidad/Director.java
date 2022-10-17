@@ -7,9 +7,9 @@ public class Director {
 	private int idDirector;
 	private String nombre;
 	private Date fechaNacimiento;
+	private Date fechaRegistro;
+	private int estado;
 	private Grado grado;
-	
-	
 	public int getIdDirector() {
 		return idDirector;
 	}
@@ -28,12 +28,27 @@ public class Director {
 	public void setFechaNacimiento(Date fechaNacimiento) {
 		this.fechaNacimiento = fechaNacimiento;
 	}
+	public Date getFechaRegistro() {
+		return fechaRegistro;
+	}
+	public void setFechaRegistro(Date fechaRegistro) {
+		this.fechaRegistro = fechaRegistro;
+	}
+	public int getEstado() {
+		return estado;
+	}
+	public void setEstado(int estado) {
+		this.estado = estado;
+	}
 	public Grado getGrado() {
 		return grado;
 	}
 	public void setGrado(Grado grado) {
 		this.grado = grado;
 	}
+	
+	
+	
 	
 	
 }

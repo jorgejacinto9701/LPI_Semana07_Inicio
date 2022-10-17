@@ -128,6 +128,7 @@ public class FrmRegistraDirector extends JFrame implements ActionListener
 				objDirector.setNombre(nom);
 				objDirector.setFechaNacimiento(Date.valueOf(fec));
 				objDirector.setGrado(objGrado);
+				objDirector.setEstado(1);
 				
 				DirectorModel model = new DirectorModel();
 				int salida = model.insertaDirector(objDirector);

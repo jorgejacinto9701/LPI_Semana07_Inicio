@@ -20,11 +20,12 @@ public class DirectorModel {
 			conn = MySqlDBConexion.getConexion();
 			
 			//2 Se prepara el SQL
-			String sql = "insert into director value(null,?,?,?)";
+			String sql = "insert into director value(null,?,?,curtime(),?,?)";
 			pstm = conn.prepareStatement(sql);
 			pstm.setString(1, obj.getNombre());
 			pstm.setDate(2, obj.getFechaNacimiento());
-			pstm.setInt(3, obj.getGrado().getIdGrado());
+			pstm.setInt(3, obj.getEstado());
+			pstm.setInt(4, obj.getGrado().getIdGrado());
 			log.info(">>> " + pstm);
 			
 			//3 Ejecutamos a la base de datos
